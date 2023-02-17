@@ -1,0 +1,35 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+.formHeader {
+  margin-top: 32px;
+}
+.formHeading {
+  color: var(--neutral);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+.formHeadingSpan {
+  color: var(--magenta);
+}
+.privacyPolicyParagraph {
+  display: flex;
+  margin: 16px 0;
+}
+.toggleSwitchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+}
+.toggleSwitchText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 10px;
+}

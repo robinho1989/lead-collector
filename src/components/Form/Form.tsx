@@ -8,7 +8,7 @@ export const Form = () => {
     <form className={styles.formContainer} action="">
       <header className={styles.formHeader}>
         <h1 className={styles.formHeading}>
-          Join the Gameboy{""}
+          Join the Gameboy{" "}
           <span className={styles.formHeadingSpan}>waiting list</span>
         </h1>
         <div className={styles.toggleSwitchContainer}>
@@ -19,10 +19,8 @@ export const Form = () => {
         </div>
       </header>
       <div className={styles.inputContainer}>
-        <label className={styles.label} htmlFor="Name">
-          Name
-        </label>
         <TextField
+          label="Name"
           value=""
           name="Name"
           id="Name"
@@ -31,10 +29,9 @@ export const Form = () => {
           }}
           placeholder={"e.g. Richard Parker"}
         />
-        <label className={styles.label} htmlFor="Email">
-          E-mail
-        </label>
+
         <TextField
+          label="Email"
           value=""
           name="Email"
           id="Email"
@@ -54,10 +51,7 @@ export const Form = () => {
           }}
         />
         <p className={styles.privacyPolicyText}>
-          I have read and accept the{" "}
-          <span className={styles.privacyPolicy}>
-            <Link to="">privacy policy</Link>{" "}
-          </span>
+          I have read and accept the <Link to="">privacy policy</Link>
         </p>
       </div>
       <Button
