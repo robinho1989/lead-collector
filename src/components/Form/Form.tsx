@@ -1,7 +1,6 @@
-import { Checkbox, TextField } from "nerdux-ui-system";
+import { Button, Checkbox, Link, TextField } from "nerdux-ui-system";
 import { Switch } from "nerdux-ui-system/dist/inputs/Switch/Switch";
 import React from "react";
-
 import * as styles from "./Form.module.scss";
 
 export const Form = () => {
@@ -20,19 +19,25 @@ export const Form = () => {
         </div>
       </header>
       <div className={styles.inputContainer}>
+        <label className={styles.label} htmlFor="Name">
+          Name
+        </label>
         <TextField
           value=""
           name="Name"
-          id=""
+          id="Name"
           onChange={(e) => {
             console.log(e.target.value);
           }}
           placeholder={"e.g. Richard Parker"}
         />
+        <label className={styles.label} htmlFor="Email">
+          E-mail
+        </label>
         <TextField
           value=""
           name="Email"
-          id=""
+          id="Email"
           onChange={(e) => {
             console.log(e.target.value);
           }}
@@ -48,7 +53,21 @@ export const Form = () => {
             console.log(e.target.checked);
           }}
         />
+        <p className={styles.privacyPolicyText}>
+          I have read and accept the{" "}
+          <span className={styles.privacyPolicy}>
+            <Link to="">privacy policy</Link>{" "}
+          </span>
+        </p>
       </div>
+      <Button
+        onClick={() => {
+          console.log("clicked");
+        }}
+        type={"button"}
+      >
+        Sign me up!
+      </Button>
     </form>
   );
 };
