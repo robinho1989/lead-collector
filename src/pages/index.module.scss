@@ -6,7 +6,9 @@
 :root {
   --magenta: #b23386;
   --neutral: #000000;
+  --disabledBackground: #c9c5ca;
   --placeHolder: #484649;
+  --whiteBackground: #ffffff;
 }
 html,
 body,
@@ -15,6 +17,7 @@ body,
   width: 100%;
 }
 body {
+  background-color: var(--neutral);
   display: flex;
   align-items: center;
   justify-content: center;

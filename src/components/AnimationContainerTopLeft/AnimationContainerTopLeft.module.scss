@@ -1,6 +1,33 @@
 .animationContainer {
   background-color: var(--magenta);
+  border-bottom: 2px solid var(--neutral);
+  min-height: 165px;
+  padding: 25px 16px;
+  &__disabled {
+    border-bottom: 2px solid var(--neutral);
+    min-height: 165px;
+    padding: 25px 16px;
+    background-color: var(--disabledBackground);
+  }
 }
 .desktopView {
   display: none;
+}
+.mobileView {
+  display: block;
+  &__disabled {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .animationContainer {
+    border-bottom: 0;
+    padding: 40px 30px;
+  }
+  .mobileView {
+    display: none;
+  }
+  .desktopView {
+    display: block;
+  }
 }

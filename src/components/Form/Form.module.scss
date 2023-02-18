@@ -2,9 +2,17 @@
   display: flex;
   flex-direction: column;
 }
-.formHeader {
-  margin-top: 32px;
+.inputContainer > div {
+  margin-bottom: 20px;
 }
+.inputContainer > div > input {
+  width: 100%;
+}
+.formContainer {
+  background-color: var(--whiteBackground);
+  padding: 32px 16px;
+}
+
 .formHeading {
   color: var(--neutral);
   font-family: "Inter";
@@ -18,12 +26,27 @@
 }
 .privacyPolicyParagraph {
   display: flex;
-  margin: 16px 0;
+  margin-bottom: 16px;
+}
+.privacyPolicyText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+.privacyPolicyTextDisabled {
+  color: var(--disabledBackground);
+}
+.privacyPolicyTextDisabled > a {
+  display: inline;
+}
+.privacyPolicyText > a {
+  display: inline;
 }
 .toggleSwitchContainer {
   display: flex;
   align-items: center;
-  margin-top: 24px;
+  margin: 16px 0;
 }
 .toggleSwitchText {
   font-family: "Inter";
@@ -32,4 +55,26 @@
   font-size: 16px;
   line-height: 24px;
   margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+  }
+  .formHeading {
+    line-height: 52px;
+    font-size: 45px;
+  }
+  .privacyPolicyParagraph {
+    margin-bottom: 32px;
+  }
+  .toggleSwitchContainer {
+    margin: 32px 0;
+  }
+  .toggleSwitchText {
+    font-weight: 500;
+  }
 }

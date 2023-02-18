@@ -1,6 +1,53 @@
 .animationContainer {
   background-color: var(--magenta);
+  border-top: 2px solid var(--neutral);
+  min-height: 165px;
+  overflow: hidden;
+  padding: 25px 16px;
+  &__disabled {
+    border-top: 2px solid var(--neutral);
+    min-height: 165px;
+    overflow: hidden;
+    padding: 25px 16px;
+    background-color: var(--disabledBackground);
+  }
 }
 .desktopView {
   display: none;
+}
+
+.mobileView {
+  display: block;
+  &__disabled {
+    display: none;
+  }
+}
+.mobileView > svg {
+  animation: gameboys 6000ms linear 0.1ms infinite;
+  margin-right: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .animationContainer {
+    border-top: 0;
+    padding: 40px 30px 40px 40px;
+  }
+  .mobileView {
+    display: none;
+  }
+
+  .desktopView {
+    display: flex;
+  }
+  .desktopView > div > svg {
+    margin-right: 60px;
+  }
+}
+
+@keyframes gameboys {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
