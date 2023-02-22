@@ -3,6 +3,7 @@
   border-bottom: 2px solid var(--neutral);
   min-height: 165px;
   padding: 25px 16px;
+  overflow: hidden;
   &__disabled {
     border-bottom: 2px solid var(--neutral);
     min-height: 165px;
@@ -19,6 +20,9 @@
     display: none;
   }
 }
+.mobileView > svg {
+  animation: gameboys 6000ms linear 0.1ms infinite;
+}
 @media only screen and (min-width: 768px) {
   .animationContainer {
     border-bottom: 0;
@@ -29,5 +33,25 @@
   }
   .desktopView {
     display: block;
+  }
+  .desktopView > svg {
+    animation: gameboys-up 6000ms linear 0.1ms infinite;
+  }
+}
+
+@keyframes gameboys {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}
+@keyframes gameboys-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
   }
 }

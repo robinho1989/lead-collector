@@ -24,7 +24,6 @@
 }
 .mobileView > svg {
   animation: gameboys 6000ms linear 0.1ms infinite;
-  margin-right: 16px;
 }
 @media only screen and (min-width: 768px) {
   .animationContainer {
@@ -45,9 +44,9 @@
 
 @keyframes gameboys {
   from {
-    transform: translateX(0);
+    transform: translateX(-200px);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { useLeadCollectorContext } from "../../context/LeadCollectorContext";
 import { GameboyColumn } from "../Gameboy/GameboyColumn";
 import { GameboyRow } from "../Gameboy/GameboyRow";
+import { PatternRow } from "../Pattern/Pattern";
+import { SingleGameboy } from "../SingleGameboy/SingleGameboy";
 import * as styles from "./AnimationContainerTopLeft.module.scss";
 
 export const AnimationContainerTopLeft = () => {
@@ -13,10 +15,10 @@ export const AnimationContainerTopLeft = () => {
       }
     >
       <div className={theme ? styles.mobileView__disabled : styles.mobileView}>
-        <GameboyRow />
+        <PatternRow />
       </div>
       <div className={styles.desktopView}>
-        <GameboyColumn />
+        <PatternRow />
       </div>
     </div>
   );
